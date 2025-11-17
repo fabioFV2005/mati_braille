@@ -1,0 +1,9 @@
+/* Importar estilos del dashboard general */
+@import '../dashboard/Sistema.css';
+
+/* Personalizaciones específicas para admin */
+.logo-text::after {
+  content: ' Admin';
+  font-size: 0.9rem;
+  opacity: 0.8;
+}

@@ -1,0 +1,20 @@
+# Python virtual environment
+.venv/
+
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+
+# Editor directories and files
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Node modules (frontend)
+frontend/node_modules/
+
+# Keep requirements.txt tracked explicitly
+!requirements.txt

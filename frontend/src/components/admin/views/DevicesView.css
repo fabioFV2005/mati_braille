@@ -1,0 +1,178 @@
+.devices-view {
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.view-header {
+  margin-bottom: 2rem;
+}
+
+.header-content {
+  flex: 1;
+}
+
+.view-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1f2937;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 0 0 0.5rem 0;
+}
+
+.title-icon {
+  color: #10b981;
+}
+
+.view-subtitle {
+  color: #6b7280;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.devices-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.device-card {
+  background: white;
+  border-radius: 16px;
+  padding: 1.5rem;
+  border: 2px solid #e5e7eb;
+  transition: all 0.3s;
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.device-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+  border-color: #10b981;
+}
+
+.device-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #6366f1, #4f46e5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  flex-shrink: 0;
+}
+
+.device-info {
+  flex: 1;
+}
+
+.device-name {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin: 0 0 0.25rem 0;
+}
+
+.device-id {
+  color: #9ca3af;
+  font-size: 0.75rem;
+  margin: 0 0 0.75rem 0;
+  font-family: monospace;
+}
+
+.device-status {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.status-icon {
+  flex-shrink: 0;
+}
+
+.status-icon.connected {
+  color: #10b981;
+}
+
+.status-icon.disconnected {
+  color: #ef4444;
+}
+
+.status-text {
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.status-text.connected {
+  color: #10b981;
+}
+
+.status-text.disconnected {
+  color: #ef4444;
+}
+
+.device-activity {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #6b7280;
+  font-size: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.device-activity svg {
+  color: #10b981;
+  flex-shrink: 0;
+}
+
+.loading-state,
+.empty-state {
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.spinner {
+  width: 48px;
+  height: 48px;
+  border: 4px solid #e5e7eb;
+  border-top-color: #10b981;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 1rem;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.empty-icon {
+  color: #d1d5db;
+  margin-bottom: 1rem;
+}
+
+.empty-state h3 {
+  font-size: 1.5rem;
+  color: #4b5563;
+  margin: 0 0 0.5rem 0;
+}
+
+.empty-state p {
+  color: #9ca3af;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .devices-view {
+    padding: 1rem;
+  }
+
+  .devices-grid {
+    grid-template-columns: 1fr;
+  }
+}
